@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-asset-cash: #6B7280;
+  --color-asset-deposit: #3B82F6;
+  --color-asset-stock: #10B981;
+  --color-asset-etf: #8B5CF6;
+  --color-asset-realestate: #F59E0B;
+  --color-asset-crypto: #EF4444;
+  --color-asset-other: #9CA3AF;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  color: #111827;
+}
