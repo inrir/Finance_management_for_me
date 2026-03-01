@@ -15,6 +15,59 @@ npx tsc --noEmit   # 타입 검사만 (빌드 없이)
 
 ---
 
+## 커밋 메시지 규칙
+
+```
+<type>(<scope>): <제목>
+
+<본문 — 선택>
+```
+
+### type
+
+| type | 사용 시점 |
+|------|-----------|
+| `feat` | 새 기능 추가 |
+| `fix` | 버그 수정 |
+| `refactor` | 동작 변경 없는 코드 개선 |
+| `style` | UI/CSS 변경 (로직 변경 없음) |
+| `docs` | CHANGELOG · MANUAL · CLAUDE.md 등 문서만 변경 |
+| `chore` | 빌드 설정 · 의존성 · .gitignore 등 |
+
+### scope (선택)
+
+변경 대상을 괄호 안에 명시. 생략 가능.
+
+| scope | 대상 |
+|-------|------|
+| `asset` | 자산 관련 (AssetForm, AssetList, AssetDetail) |
+| `tx` | 거래 내역 |
+| `portfolio` | 포트폴리오·비중 |
+| `calc` | CalcService |
+| `store` | Zustand 스토어 |
+| `settings` | 설정·환율 |
+| `ui` | 공통 컴포넌트 (Card, Button 등) |
+
+### 제목 규칙
+
+- 한국어 사용
+- 현재형 서술 ("추가했다" ❌ → "추가" ✅)
+- 50자 이내
+
+### 예시
+
+```
+feat(asset): 자산 유형별 입력 필드 분기 추가
+fix(portfolio): 외화 자산 비중 KRW 환산 버그 수정
+feat(asset): 현재가 일괄 입력 UX 추가
+style(ui): 외화 자산 원화 병기 표시 (≈ ₩xxx)
+docs: CHANGELOG 및 MANUAL 최초 작성
+chore: CLAUDE.md 커밋 규칙 추가
+refactor(calc): assetStatsInBase 공통 memo로 분리
+```
+
+---
+
 ## 아키텍처
 
 ### 계층 구조
